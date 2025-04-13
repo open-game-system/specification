@@ -545,6 +545,7 @@ This protocol is especially valuable for:
 - Games that need to support low-powered devices without compromising visual quality
 - Experiences where consistent visual quality across all devices is important
 - Games with graphically complex scenes that would benefit from powerful GPU rendering
+- Dynamic AI-generated worlds that are procedurally created on demand
 - TV casting via the Cast Kit
 
 #### Stream Kit Architecture
