@@ -26,7 +26,7 @@ The specification is implemented by the OGS platform and SDKs, which follow thes
 
 ## Core Specifications
 
-The OGS v1 specification includes core protocols for: Account Linking, Push Notifications, TV Casting, and optional Cloud Rendering.
+The OGS v1 specification includes core protocols for: Account Linking, Push Notifications, TV Casting, and Cloud Rendering. Cloud Rendering is a foundational technology that powers both the TV Casting capabilities (via Cast Kit) and advanced rendering options for thin clients (via Stream Kit).
 
 ### Account Linking Protocol
 
@@ -536,13 +536,16 @@ Content-Type: application/json
 
 ### Cloud Rendering Protocol
 
-The Cloud Rendering Protocol enables games to offload intensive graphics rendering to powerful cloud servers and stream the output via WebRTC to the client. Unlike other cloud gaming solutions that require streaming the entire game, OGS Stream Kit allows selective cloud rendering of specific graphics-intensive components while maintaining local rendering for UI elements, creating a hybrid rendering approach ideal for web games.
+The Cloud Rendering Protocol enables games to offload intensive graphics rendering to powerful cloud servers and stream the output via WebRTC to the client. This protocol serves as the foundation for both TV casting (through Cast Kit) and selective cloud rendering (through Stream Kit).
+
+Stream Kit specifically allows selective cloud rendering of specific graphics-intensive components while maintaining local rendering for UI elements, creating a hybrid rendering approach ideal for web games on thin clients with limited GPU capabilities.
 
 This protocol is especially valuable for:
 - Turn-based games requiring high-fidelity 3D graphics
 - Games that need to support low-powered devices without compromising visual quality
 - Experiences where consistent visual quality across all devices is important
 - Games with graphically complex scenes that would benefit from powerful GPU rendering
+- TV casting via the Cast Kit
 
 #### Stream Kit Architecture
 
